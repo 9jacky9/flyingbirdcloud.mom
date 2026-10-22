@@ -1,0 +1,1313 @@
+/* ==========================================================================
+   FlyingBird机场 - 极速动能与疾风光芒流样式表 (Kinetic Velocity Modern)
+   特点：斜切动感、琥珀竞速金与曜石墨灰、高能脉冲条纹、极致响应
+   ========================================================================== */
+
+:root {
+  --color-amber-primary: #D97706;
+  --color-amber-light: #F59E0B;
+  --color-amber-glow: #FEF3C7;
+  --color-obsidian: #18181B;
+  --color-obsidian-sub: #27272A;
+  --color-slate-text: #52525B;
+  --color-canvas: #FAFAFA;
+  --color-surface-white: #FFFFFF;
+  --color-card-border: #E4E4E7;
+  --color-speed-green: #10B981;
+  --font-kinetic: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --max-w-kinetic: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-kinetic);
+  background-color: var(--color-canvas);
+  color: var(--color-obsidian);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 布局外框 */
+.kinetic-shell {
+  max-width: var(--max-w-kinetic);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 动感顶栏 */
+.kinetic-nav-wrapper {
+  background-color: var(--color-obsidian);
+  border-bottom: 3px solid var(--color-amber-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.kinetic-nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.kinetic-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.kinetic-brand svg {
+  height: 40px;
+  width: auto;
+}
+
+.kinetic-nav-toggle {
+  display: none;
+}
+
+.kinetic-nav-container {
+  display: block;
+}
+
+.kinetic-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.kinetic-links a {
+  color: #D4D4D8;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  transition: color 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.kinetic-links a:hover {
+  color: var(--color-amber-light);
+}
+
+.kinetic-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 动能按钮 */
+.k-btn,
+a.k-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none !important;
+  border-radius: 4px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 48px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.k-btn-amber,
+a.k-btn-amber,
+a.k-btn-amber:link,
+a.k-btn-amber:visited {
+  background: linear-gradient(135deg, var(--color-amber-light) 0%, var(--color-amber-primary) 100%) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--color-amber-primary) !important;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.25);
+}
+
+.k-btn-amber:hover,
+.k-btn-amber:focus,
+.k-btn-amber:active,
+a.k-btn-amber:hover,
+a.k-btn-amber:focus,
+a.k-btn-amber:active {
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.35);
+  text-decoration: none !important;
+}
+
+.k-btn-pbn,
+a.k-btn-pbn,
+a.k-btn-pbn:link,
+a.k-btn-pbn:visited {
+  background-color: #FFFFFF !important;
+  color: var(--color-obsidian) !important;
+  border: 2px solid var(--color-obsidian) !important;
+}
+
+.k-btn-pbn:hover,
+.k-btn-pbn:focus,
+.k-btn-pbn:active,
+a.k-btn-pbn:hover,
+a.k-btn-pbn:focus,
+a.k-btn-pbn:active {
+  background-color: var(--color-amber-glow) !important;
+  border-color: var(--color-amber-primary) !important;
+  color: var(--color-amber-primary) !important;
+  text-decoration: none !important;
+}
+
+.k-btn-dark,
+a.k-btn-dark,
+a.k-btn-dark:link,
+a.k-btn-dark:visited {
+  background-color: var(--color-obsidian) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--color-obsidian) !important;
+}
+
+.k-btn-dark:hover,
+.k-btn-dark:focus,
+.k-btn-dark:active,
+a.k-btn-dark:hover,
+a.k-btn-dark:focus,
+a.k-btn-dark:active {
+  background-color: var(--color-obsidian-sub) !important;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+}
+
+/* 首屏 Billboard Hero */
+.kinetic-hero {
+  background: linear-gradient(180deg, #18181B 0%, #27272A 100%);
+  color: #FFFFFF;
+  padding: 80px 0 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+.kinetic-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.k-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(245, 158, 11, 0.15);
+  border: 1px solid var(--color-amber-primary);
+  color: var(--color-amber-light);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.k-badge-flash {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-amber-light);
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.kinetic-title {
+  font-size: 46px;
+  line-height: 1.15;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+
+.kinetic-title span {
+  color: var(--color-amber-light);
+  display: inline-block;
+}
+
+.kinetic-subtitle {
+  font-size: 17px;
+  color: #A1A1AA;
+  line-height: 1.65;
+  margin-bottom: 32px;
+  max-width: 540px;
+}
+
+.kinetic-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+/* ==========================================
+   飞鸟动图 - 动感超音速破空金翼飞鸟
+   ========================================== */
+.kinetic-bird-stage {
+  background: radial-gradient(ellipse at 50% 50%, #18181B 0%, #09090B 100%);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 30px rgba(245, 158, 11, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.k-bird-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #27272A;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.k-bird-tag {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-amber-light);
+  letter-spacing: 1px;
+}
+
+.k-bird-mode {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--color-speed-green);
+  font-weight: 700;
+}
+
+.k-mode-pulse {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-speed-green);
+  border-radius: 50%;
+  animation: kPulseGlow 1.5s infinite ease-in-out;
+}
+
+@keyframes kPulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.7); }
+}
+
+.k-bird-canvas {
+  width: 100%;
+  height: 220px;
+  background-color: #09090B;
+  border: 1px solid #27272A;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 激波音障圆环膨胀扩散动画 */
+.shockwave-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1.5px solid rgba(245, 158, 11, 0.5);
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.2);
+  opacity: 0;
+  animation: shockwaveExpand 3s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+.ring-1 { width: 140px; height: 140px; animation-delay: 0s; }
+.ring-2 { width: 140px; height: 140px; animation-delay: 1s; }
+.ring-3 { width: 140px; height: 140px; animation-delay: 2s; }
+
+@keyframes shockwaveExpand {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0.9;
+    border-color: rgba(254, 240, 138, 0.8);
+  }
+  60% {
+    opacity: 0.4;
+    border-color: rgba(245, 158, 11, 0.4);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.6);
+    opacity: 0;
+    border-color: rgba(217, 119, 6, 0);
+  }
+}
+
+/* 动能极速光束粒子 */
+.k-speed-beam {
+  position: absolute;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--color-amber-light), transparent);
+  animation: speedBeamFly 1.6s linear infinite;
+}
+
+.beam-1 { top: 22%; width: 140px; animation-duration: 1.3s; animation-delay: 0s; }
+.beam-2 { top: 45%; width: 220px; animation-duration: 1.8s; animation-delay: 0.6s; }
+.beam-3 { top: 70%; width: 160px; animation-duration: 1.5s; animation-delay: 0.9s; }
+.beam-4 { top: 88%; width: 110px; animation-duration: 1.2s; animation-delay: 0.3s; }
+
+@keyframes speedBeamFly {
+  0% { right: -220px; opacity: 0; }
+  30% { opacity: 0.9; }
+  80% { opacity: 0.9; }
+  100% { right: 110%; opacity: 0; }
+}
+
+/* 动感金翼飞鸟主体 */
+.k-bird-svg-wrap {
+  width: 240px;
+  height: 170px;
+  position: relative;
+  z-index: 2;
+  animation: kBirdGlide 2.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(245, 158, 11, 0.35));
+}
+
+@keyframes kBirdGlide {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
+}
+
+/* 金色飞鸟左右翼高速扇动 */
+.wing-k-left {
+  transform-origin: 130px 90px;
+  animation: kWingFlapLeft 0.95s ease-in-out infinite alternate;
+}
+
+.wing-k-right {
+  transform-origin: 130px 90px;
+  animation: kWingFlapRight 0.95s ease-in-out infinite alternate;
+}
+
+@keyframes kWingFlapLeft {
+  0% {
+    transform: rotate(0deg) scaleY(1);
+  }
+  100% {
+    transform: rotate(25deg) scaleY(0.6) skewX(8deg);
+  }
+}
+
+@keyframes kWingFlapRight {
+  0% {
+    transform: rotate(0deg) scaleY(1);
+  }
+  100% {
+    transform: rotate(-25deg) scaleY(0.6) skewX(-8deg);
+  }
+}
+
+/* 尾部矢量喷气羽焰脉冲 */
+.k-afterburner {
+  transform-origin: 130px 122px;
+  animation: jetThrustPulse 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes jetThrustPulse {
+  0% {
+    transform: scaleY(0.85);
+    opacity: 0.65;
+  }
+  100% {
+    transform: scaleY(1.3);
+    opacity: 1;
+  }
+}
+
+/* 底部动能指标条 */
+.k-bird-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #27272A;
+}
+
+.k-metric-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.k-cell-k {
+  font-size: 11px;
+  font-weight: 700;
+  color: #71717A;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.k-cell-v {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-amber-light);
+}
+
+/* 动感跑马数据带 */
+.kinetic-marquee-strip {
+  background-color: var(--color-amber-primary);
+  color: #FFFFFF;
+  padding: 12px 0;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.marquee-flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* 章节外框 */
+.kinetic-section {
+  padding: 88px 0;
+}
+
+.kinetic-head-wrap {
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.k-section-tag {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-amber-primary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.k-section-title {
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--color-obsidian);
+  letter-spacing: -0.5px;
+}
+
+/* 核心特性 (3 cards) */
+.kinetic-feature-deck {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.k-feat-card {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-card-border);
+  border-radius: 6px;
+  padding: 32px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.k-feat-card:hover {
+  border-color: var(--color-amber-primary);
+  transform: translateY(-2px);
+}
+
+.k-card-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-amber-primary), var(--color-amber-light));
+}
+
+.k-icon-outline {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 20px;
+}
+
+.k-feat-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-obsidian);
+  margin-bottom: 12px;
+}
+
+.k-feat-desc {
+  font-size: 14px;
+  color: var(--color-slate-text);
+  line-height: 1.6;
+}
+
+/* 流媒体与 AI 狂飙矩阵 (3 cards) */
+.kinetic-media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.k-media-box {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-card-border);
+  border-radius: 6px;
+  padding: 32px 24px;
+}
+
+.k-badge-gold {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: var(--color-amber-glow);
+  color: var(--color-amber-primary);
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 3px;
+  margin-bottom: 14px;
+}
+
+.k-media-box h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--color-obsidian);
+  margin-bottom: 10px;
+}
+
+.k-media-box p {
+  font-size: 14px;
+  color: var(--color-slate-text);
+  line-height: 1.6;
+}
+
+/* 价格对比 (3 方案) */
+.kinetic-pricing-deck {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.k-price-card {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-card-border);
+  border-radius: 6px;
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.k-price-card.hot {
+  border: 2px solid var(--color-amber-primary);
+  box-shadow: 0 12px 30px rgba(217, 119, 6, 0.12);
+}
+
+.k-badge-hot {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background-color: var(--color-amber-primary);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 3px;
+}
+
+.k-plan-name {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--color-obsidian);
+  margin-bottom: 8px;
+}
+
+.k-plan-desc {
+  font-size: 13px;
+  color: var(--color-slate-text);
+  min-height: 38px;
+  margin-bottom: 24px;
+}
+
+.k-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+.k-curr {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-obsidian);
+}
+
+.k-num {
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--color-amber-primary);
+  line-height: 1;
+}
+
+.k-unit {
+  font-size: 14px;
+  color: var(--color-slate-text);
+}
+
+.k-features-list {
+  list-style: none;
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+
+.k-feature-point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--color-obsidian);
+  padding: 8px 0;
+}
+
+.k-bullet {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-amber-primary);
+  border-radius: 2px;
+  flex-shrink: 0;
+  transform: rotate(45deg);
+}
+
+/* 用户实测反馈 (3 reviews) */
+.kinetic-reviews-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.k-review-card {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-card-border);
+  border-radius: 6px;
+  padding: 28px;
+}
+
+.k-review-text {
+  font-size: 15px;
+  color: var(--color-obsidian);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.k-review-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px dashed var(--color-card-border);
+  padding-top: 16px;
+}
+
+.k-avatar-box {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--color-amber-light), var(--color-amber-primary));
+  color: #FFFFFF;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.k-user-info h4 {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-obsidian);
+}
+
+.k-user-info p {
+  font-size: 12px;
+  color: var(--color-slate-text);
+}
+
+/* 常见问答 (3 items) */
+.kinetic-faq-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.k-faq-box {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-card-border);
+  border-radius: 6px;
+  padding: 28px;
+}
+
+.k-faq-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--color-obsidian);
+  margin-bottom: 12px;
+}
+
+.k-faq-desc {
+  font-size: 14px;
+  color: var(--color-slate-text);
+  line-height: 1.6;
+}
+
+/* 页脚：严格仅显示4个中文标题，独立页面 */
+.kinetic-footer {
+  background-color: var(--color-obsidian);
+  color: #A1A1AA;
+  padding: 48px 0;
+  border-top: 3px solid var(--color-amber-primary);
+}
+
+.k-footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.k-footer-links a {
+  color: #E4E4E7;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.k-footer-links a:hover {
+  color: var(--color-amber-light);
+}
+
+.k-footer-rights {
+  text-align: center;
+  font-size: 13px;
+  color: #71717A;
+}
+
+/* 独立子页面排版 */
+.k-subpage-wrap {
+  min-height: 70vh;
+  padding: 64px 0 96px;
+  background-color: var(--color-surface-white);
+}
+
+.k-subpage-box {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.k-back-home {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-weight: 800;
+  color: var(--color-amber-primary);
+  text-decoration: none;
+}
+
+.k-subpage-box h1 {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--color-obsidian);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--color-obsidian);
+}
+
+.k-subpage-box h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-obsidian);
+  margin: 32px 0 12px;
+}
+
+.k-subpage-box p {
+  font-size: 15px;
+  color: var(--color-slate-text);
+  margin-bottom: 16px;
+}
+
+.k-subpage-box ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.k-subpage-box li {
+  margin-bottom: 8px;
+  color: var(--color-slate-text);
+  font-size: 15px;
+}
+
+/* 移动端响应式适配 */
+@media (max-width: 768px) {
+  .kinetic-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .kinetic-title {
+    font-size: 32px;
+  }
+
+  .kinetic-feature-deck,
+  .kinetic-media-grid,
+  .kinetic-pricing-deck,
+  .kinetic-reviews-row,
+  .kinetic-faq-list {
+    grid-template-columns: 1fr;
+  }
+
+  .kinetic-nav-inner {
+    height: 64px;
+    position: relative;
+  }
+
+  .kinetic-nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #3F3F46;
+    border-radius: 4px;
+    background-color: var(--color-obsidian-sub);
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 12px;
+    order: 2;
+  }
+
+  .kinetic-nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--color-amber-light);
+    transition: all 0.25s ease;
+    border-radius: 2px;
+  }
+
+  .kinetic-nav-toggle.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .kinetic-nav-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  .kinetic-nav-toggle.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .kinetic-nav-container {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #18181B;
+    border-bottom: 3px solid var(--color-amber-primary);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    z-index: 999;
+  }
+
+  .kinetic-nav-container.is-open {
+    display: block;
+  }
+
+  .kinetic-links {
+    display: flex !important;
+    flex-direction: column;
+    padding: 6px 0;
+    margin: 0;
+    list-style: none;
+    gap: 0;
+    width: 100%;
+  }
+
+  .kinetic-links li {
+    width: 100%;
+  }
+
+  .kinetic-links li a {
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 800;
+    color: #E4E4E7;
+    border-bottom: 1px solid #27272A;
+    min-height: 48px;
+    width: 100%;
+  }
+
+  .kinetic-links li:last-child a {
+    border-bottom: none;
+  }
+
+  .kinetic-links li a:hover,
+  .kinetic-links li a:active {
+    background-color: #27272A;
+    color: var(--color-amber-light);
+  }
+
+  .kinetic-nav-actions {
+    order: 3;
+  }
+
+  .kinetic-nav-actions .k-btn {
+    min-height: 40px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .kinetic-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .kinetic-cta-group .k-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .marquee-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .k-footer-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+
+/* ==========================================================================
+   动能流超链接增强与疾速快讯扩展样式 (Kinetic Velocity Style)
+   ========================================================================== */
+a:not(.k-btn) {
+  color: #D97706;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:not(.k-btn):visited {
+  color: #D97706;
+}
+
+a:not(.k-btn):hover, a:not(.k-btn):active {
+  color: #B45309;
+}
+
+/* 快讯列表页排版 */
+.guides-hub-head {
+  padding: 72px 0 48px;
+  background: linear-gradient(180deg, #18181B 0%, #27272A 100%);
+  color: #FFFFFF;
+  border-bottom: 3px solid var(--color-amber-primary);
+}
+
+.guides-hub-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(245, 158, 11, 0.15);
+  border: 1px solid var(--color-amber-primary);
+  color: var(--color-amber-light);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.guides-main-title {
+  font-size: 40px;
+  font-weight: 900;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.guides-main-title span {
+  color: var(--color-amber-light);
+}
+
+.guides-subtitle {
+  font-size: 16px;
+  color: #A1A1AA;
+  max-width: 680px;
+  line-height: 1.65;
+}
+
+.guides-list-section {
+  padding: 72px 0 96px;
+}
+
+.guides-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.guide-post-card {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-card-border);
+  border-radius: 6px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.guide-post-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-amber-primary);
+  box-shadow: 0 10px 25px rgba(217, 119, 6, 0.12);
+}
+
+.guide-post-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-amber-primary), var(--color-amber-light));
+}
+
+.guide-category-badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 10px;
+  background-color: var(--color-amber-glow);
+  color: var(--color-amber-primary);
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 3px;
+  margin-bottom: 14px;
+}
+
+.guide-card-title {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.guide-card-title a {
+  color: var(--color-obsidian);
+  text-decoration: none;
+}
+
+.guide-card-title a:visited {
+  color: var(--color-obsidian);
+}
+
+.guide-card-title a:hover {
+  color: var(--color-amber-primary);
+}
+
+.guide-card-summary {
+  font-size: 14px;
+  color: var(--color-slate-text);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.guide-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-card-border);
+  padding-top: 14px;
+  font-size: 12px;
+  color: #71717A;
+  font-weight: 700;
+}
+
+/* 详情文章排版 */
+.kinetic-article-wrap {
+  padding: 64px 0 96px;
+  background-color: var(--color-surface-white);
+}
+
+.kinetic-article-container {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.kinetic-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--color-amber-primary);
+  margin-bottom: 24px;
+}
+
+.kinetic-article-head {
+  border-bottom: 2px solid var(--color-obsidian);
+  padding-bottom: 24px;
+  margin-bottom: 36px;
+}
+
+.kinetic-badge-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: var(--color-amber-glow);
+  color: var(--color-amber-primary);
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+
+.kinetic-article-h1 {
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.3;
+  color: var(--color-obsidian);
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.kinetic-meta-line {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  color: #71717A;
+  font-weight: 700;
+}
+
+.kinetic-article-body {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #27272A;
+}
+
+.kinetic-article-body h2 {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--color-obsidian);
+  margin: 40px 0 16px;
+  padding-left: 12px;
+  border-left: 4px solid var(--color-amber-primary);
+  line-height: 1.35;
+}
+
+.kinetic-article-body h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--color-amber-primary);
+  margin: 28px 0 12px;
+  line-height: 1.45;
+}
+
+.kinetic-article-body p {
+  margin-bottom: 20px;
+}
+
+.kinetic-article-body ul, .kinetic-article-body ol {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+
+.kinetic-article-body li {
+  margin-bottom: 8px;
+}
+
+.kinetic-article-body blockquote {
+  background-color: var(--color-canvas);
+  border-left: 4px solid var(--color-obsidian);
+  padding: 16px 20px;
+  margin: 24px 0;
+  color: var(--color-slate-text);
+  font-weight: 500;
+}
+
+/* 正文中超链接：高能琥珀金，访问前后统一，绝不使用默认蓝紫 */
+.kinetic-article-body a {
+  color: #D97706 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 800;
+}
+
+.kinetic-article-body a:visited {
+  color: #D97706 !important;
+}
+
+.kinetic-article-body a:hover, .kinetic-article-body a:active {
+  color: #B45309 !important;
+}
+
+.kinetic-author-box {
+  margin-top: 56px;
+  padding: 28px;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-card-border);
+  border-radius: 6px;
+}
+
+.kinetic-author-box h4 {
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--color-obsidian);
+  margin-bottom: 8px;
+}
+
+.kinetic-author-box p {
+  font-size: 14px;
+  color: var(--color-slate-text);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .guides-grid-3col {
+    grid-template-columns: 1fr;
+  }
+  .guides-main-title {
+    font-size: 28px;
+  }
+  .kinetic-article-h1 {
+    font-size: 26px;
+  }
+}
