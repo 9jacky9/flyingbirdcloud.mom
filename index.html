@@ -138,48 +138,79 @@
           <div class="k-speed-beam beam-3"></div>
           <div class="k-speed-beam beam-4"></div>
 
-          <!-- 金翼破空飞鸟主体 -->
+          <!-- 动感极速破空侧视机能战隼主体 (彻底区别于其他域名的俯视几何折纸鸟) -->
           <div class="k-bird-svg-wrap">
-            <svg viewBox="0 0 260 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="金翼破空飞鸟图形">
+            <svg viewBox="0 0 280 170" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="侧面破空机能战隼图形">
               <defs>
-                <linearGradient id="kGoldFlameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="kGoldBladeGrad" x1="0%" y1="0%" x2="100%" y2="80%">
                   <stop offset="0%" stop-color="#FDE68A"/>
-                  <stop offset="50%" stop-color="#F59E0B"/>
+                  <stop offset="45%" stop-color="#F59E0B"/>
                   <stop offset="100%" stop-color="#D97706"/>
                 </linearGradient>
-                <linearGradient id="kSonicPlumeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="#FDE68A" stop-opacity="0.9"/>
-                  <stop offset="40%" stop-color="#F59E0B" stop-opacity="0.6"/>
+                <linearGradient id="kObsidianArmor" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#27272A"/>
+                  <stop offset="60%" stop-color="#18181B"/>
+                  <stop offset="100%" stop-color="#09090B"/>
+                </linearGradient>
+                <linearGradient id="kFalconPlume" x1="100%" y1="50%" x2="0%" y2="50%">
+                  <stop offset="0%" stop-color="#FDE68A" stop-opacity="0.95"/>
+                  <stop offset="40%" stop-color="#F59E0B" stop-opacity="0.75"/>
+                  <stop offset="100%" stop-color="#D97706" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="machVaporGrad" x1="100%" y1="50%" x2="0%" y2="50%">
+                  <stop offset="0%" stop-color="#FDE68A" stop-opacity="0.6"/>
+                  <stop offset="40%" stop-color="#F59E0B" stop-opacity="0.25"/>
                   <stop offset="100%" stop-color="#D97706" stop-opacity="0"/>
                 </linearGradient>
               </defs>
 
-              <!-- 左翼群组 (高速扇动) -->
-              <g class="wing-k-left">
-                <polygon points="120,86 45,46 12,62 102,102" fill="url(#kGoldFlameGrad)"/>
-                <polygon points="102,102 12,62 0,82 90,114" fill="#D97706"/>
-                <polygon points="90,114 0,82 -6,102 78,122" fill="#B45309"/>
-                <polygon points="120,86 102,102 65,78" fill="#FDE68A"/>
+              <!-- 音障激波蒸气锥 (鼻锥激波扩散) -->
+              <path class="mach-vapor-cone" d="M240,84 L90,16 L115,84 L90,152 Z" fill="url(#machVaporGrad)"/>
+              <path d="M240,84 L120,24" stroke="#FDE68A" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
+              <path d="M240,84 L120,144" stroke="#FDE68A" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
+
+              <!-- 远景副翼 (透视深层，破风挥动) -->
+              <g class="falcon-wing-far">
+                <polygon points="155,76 128,16 88,22 136,70" fill="#B45309"/>
+                <polygon points="136,70 88,22 60,38 120,78" fill="#92400E"/>
+                <polygon points="120,78 60,38 42,56 108,84" fill="#78350F"/>
               </g>
 
-              <!-- 右翼群组 (高速扇动) -->
-              <g class="wing-k-right">
-                <polygon points="140,86 215,46 248,62 158,102" fill="url(#kGoldFlameGrad)"/>
-                <polygon points="158,102 248,62 260,82 170,114" fill="#D97706"/>
-                <polygon points="170,114 260,82 266,102 182,122" fill="#B45309"/>
-                <polygon points="140,86 158,102 195,78" fill="#FDE68A"/>
+              <!-- 尾部双向音速加力喷焰 -->
+              <g class="falcon-afterburner">
+                <polygon points="90,86 0,92 90,98" fill="url(#kFalconPlume)"/>
+                <polygon points="90,88 28,92 90,96" fill="#FDE68A" opacity="0.9"/>
               </g>
 
-              <!-- 尾部矢量喷气羽焰 -->
-              <polygon class="k-afterburner" points="124,122 136,122 130,165" fill="url(#kSonicPlumeGrad)"/>
+              <!-- 尾翼与水平安定面 -->
+              <g class="falcon-tail-rudder">
+                <polygon points="105,82 45,68 55,78 112,86" fill="#D97706"/>
+                <polygon points="105,94 48,118 60,126 112,98" fill="#B45309"/>
+              </g>
 
-              <!-- 核心鸟身与头部 -->
-              <g class="bird-core-falcon">
-                <polygon points="130,36 135,52 125,52" fill="#FDE68A"/>
-                <polygon points="130,48 138,68 122,68" fill="#F59E0B"/>
-                <polygon points="130,66 142,102 130,126 118,102" fill="#18181B" stroke="#F59E0B" stroke-width="1.5"/>
-                <polygon points="130,68 140,100 130,122" fill="#27272A"/>
-                <line x1="130" y1="52" x2="130" y2="124" stroke="#FDE68A" stroke-width="2"/>
+              <!-- 猎鹰机能躯干 (侧视气动流线型) -->
+              <g class="falcon-fuselage">
+                <path d="M216,84 C205,98 180,114 135,114 C108,114 88,104 78,94 C92,86 125,78 160,76 C190,76 210,76 216,84 Z" fill="url(#kObsidianArmor)" stroke="#F59E0B" stroke-width="1.5"/>
+                <!-- 机体能量流动刻线 -->
+                <path d="M185,82 L150,108 M155,80 L125,106 M125,82 L100,100" stroke="#FDE68A" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+
+                <!-- 鹰冠与利喙 -->
+                <polygon points="190,66 215,70 230,82 205,84 178,74" fill="url(#kGoldBladeGrad)"/>
+                <path d="M216,74 L240,84 L225,93 L216,84 Z" fill="#FDE68A"/>
+                
+                <!-- 义眼 / 激光传感器 -->
+                <circle cx="212" cy="79" r="2.8" fill="#FFFFFF"/>
+                <circle cx="212" cy="79" r="1.6" fill="#F59E0B"/>
+              </g>
+
+              <!-- 近景主翼 (前置锋刃金羽展翅) -->
+              <g class="falcon-wing-near">
+                <polygon points="160,76 132,8 82,14 140,68" fill="url(#kGoldBladeGrad)"/>
+                <polygon points="140,68 82,14 50,30 118,76" fill="#F59E0B"/>
+                <polygon points="118,76 50,30 28,50 102,84" fill="#D97706"/>
+                <polygon points="102,84 28,50 14,72 90,92" fill="#B45309"/>
+                <!-- 翼根装甲护盾 -->
+                <polygon points="165,74 185,78 152,94 135,88" fill="#18181B" stroke="#FDE68A" stroke-width="1.5"/>
               </g>
             </svg>
           </div>

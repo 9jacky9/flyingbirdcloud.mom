@@ -373,68 +373,91 @@ a.k-btn-dark:active {
   100% { right: 110%; opacity: 0; }
 }
 
-/* 动感金翼飞鸟主体 */
+/* 动感侧面破空机能战隼主体 */
 .k-bird-svg-wrap {
-  width: 240px;
+  width: 280px;
   height: 170px;
   position: relative;
   z-index: 2;
-  animation: kBirdGlide 2.8s ease-in-out infinite;
-  filter: drop-shadow(0 0 16px rgba(245, 158, 11, 0.35));
+  animation: raptorSlicing 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(245, 158, 11, 0.45));
 }
 
-@keyframes kBirdGlide {
+@keyframes raptorSlicing {
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
   }
-  50% {
-    transform: translateY(-10px) rotate(-1deg);
+  35% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+  70% {
+    transform: translateY(6px) rotate(1.5deg);
   }
 }
 
-/* 金色飞鸟左右翼高速扇动 */
-.wing-k-left {
-  transform-origin: 130px 90px;
-  animation: kWingFlapLeft 0.95s ease-in-out infinite alternate;
+/* 侧视主近翼高速破风扇动 */
+.falcon-wing-near {
+  transform-origin: 160px 76px;
+  animation: raptorWingNearBeat 0.85s ease-in-out infinite alternate;
 }
 
-.wing-k-right {
-  transform-origin: 130px 90px;
-  animation: kWingFlapRight 0.95s ease-in-out infinite alternate;
-}
-
-@keyframes kWingFlapLeft {
+@keyframes raptorWingNearBeat {
   0% {
     transform: rotate(0deg) scaleY(1);
   }
   100% {
-    transform: rotate(25deg) scaleY(0.6) skewX(8deg);
+    transform: rotate(-24deg) scaleY(0.62) skewX(10deg);
   }
 }
 
-@keyframes kWingFlapRight {
+/* 侧视远景副翼透视扇动 */
+.falcon-wing-far {
+  transform-origin: 155px 76px;
+  animation: raptorWingFarBeat 0.85s ease-in-out infinite alternate;
+  animation-delay: -0.12s;
+}
+
+@keyframes raptorWingFarBeat {
   0% {
-    transform: rotate(0deg) scaleY(1);
+    transform: rotate(-4deg) scaleY(0.92);
   }
   100% {
-    transform: rotate(-25deg) scaleY(0.6) skewX(-8deg);
+    transform: rotate(-28deg) scaleY(0.56) skewX(8deg);
   }
 }
 
-/* 尾部矢量喷气羽焰脉冲 */
-.k-afterburner {
-  transform-origin: 130px 122px;
-  animation: jetThrustPulse 0.4s ease-in-out infinite alternate;
+/* 尾部双向音速加力喷焰 */
+.falcon-afterburner {
+  transform-origin: 90px 92px;
+  animation: raptorAfterburner 0.35s ease-in-out infinite alternate;
 }
 
-@keyframes jetThrustPulse {
+@keyframes raptorAfterburner {
   0% {
-    transform: scaleY(0.85);
-    opacity: 0.65;
+    transform: scaleX(0.85);
+    opacity: 0.75;
   }
   100% {
-    transform: scaleY(1.3);
+    transform: scaleX(1.45);
     opacity: 1;
+    filter: drop-shadow(0 0 10px #F59E0B);
+  }
+}
+
+/* 鹰喙激波音锥脉动扩散 */
+.mach-vapor-cone {
+  transform-origin: 240px 84px;
+  animation: machVaporPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes machVaporPulse {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scaleX(0.92);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scaleX(1.18);
   }
 }
 
