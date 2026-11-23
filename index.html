@@ -48,6 +48,7 @@
   }
   </script>
 <link href="style.css" rel="stylesheet"/>
+<style id="maintenance-anchor-offset">#fast-plans{scroll-margin-top:180px;}</style>
 </head>
 <body>
 <!-- 动感顶栏导航 -->
@@ -99,7 +100,7 @@
 <div class="kinetic-cta-group">
 <a class="k-btn k-btn-amber" href="https://ww012.twilightaff.com/#/?code=A56DH1Af" rel="nofollow" target="_blank">开始免费试用</a>
 <!-- SEO Authority Backlink: Strict dofollow, no rel="nofollow" -->
-<a class="k-btn k-btn-pbn" href="#plans" target="_blank">查看套餐资费</a>
+<a class="k-btn k-btn-pbn" href="#fast-plans">查看套餐资费</a>
 </div>
 </div>
 <!-- 动感破空飞鸟动图舞台 (去除测速节点，呈现极速破空金翼飞鸟) -->
@@ -467,5 +468,23 @@
     }
   })();
   </script>
+<script id="maintenance-anchor-offset-script">
+(() => {
+  const targets = ["fast-plans"];
+  const headers = [...document.querySelectorAll('header,nav,[class*="nav"],[class*="header"]')];
+  const update = () => {
+    const height = Math.max(0, ...headers.map(el => {
+      const box = el.getBoundingClientRect();
+      const position = getComputedStyle(el).position;
+      return ['fixed','sticky'].includes(position) && box.width > innerWidth / 2 && box.height < 400 ? box.height : 0;
+    }));
+    targets.forEach(id => { const el = document.getElementById(id); if (el) el.style.scrollMarginTop = Math.ceil(height + 16) + 'px'; });
+  };
+  update();
+  addEventListener('resize', update, {passive: true});
+  if ('ResizeObserver' in window) { const observer = new ResizeObserver(update); headers.forEach(el => observer.observe(el)); }
+  if (document.fonts) document.fonts.ready.then(update);
+})();
+</script>
 </body>
 </html>
